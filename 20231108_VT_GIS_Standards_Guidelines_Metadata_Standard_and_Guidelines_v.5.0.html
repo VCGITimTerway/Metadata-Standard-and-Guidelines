@@ -1,0 +1,501 @@
+<!--This is code to be inserted and maintained in the source block of the Metadata Standard and Guidelines basic page within the State of Vermont's drupal-based CMS.-->
+<!--This is a backup of published version code.-->
+<!--Version 5.0-->
+<!--Published November 8, 2023-->
+<!--Edited and Documented by T. Terway-->
+
+<p>Version 5.0 | November 8, 2023</p>
+
+<!--TOPNAV BEGIN-->
+<div class="usa-alert usa-alert--info margin-y-5">
+<div class="usa-alert__body">
+<h3 class="usa-alert__heading">Contents</h3>
+
+<p><a href="#standard"><strong>Standard</strong></a></p>
+
+<ul>
+	<li class="usa-alert__text"><a href="#history">History</a></li>
+	<li class="usa-alert__text"><a href="#statutory-authority-and-standard-review">Statutory Authority and Standard Review / Approval</a></li>
+	<li class="usa-alert__text"><a href="#purpose">Purpose</a></li>
+	<li class="usa-alert__text"><a href="#guiding-principles">Guiding Principles</a></li>
+	<li class="usa-alert__text"><a href="#specifications">Specifications</a> (<a href="#level-1-iso-core">Level 1 - ISO Core</a> | <a href="#level-2-full">Level 2 - Full</a>)</li>
+</ul>
+
+<p><a href="#guidelines"><strong>Guidelines</strong></a></p>
+
+<ul>
+	<li class="usa-alert__text"><a href="#effecting-the-standard-in-an-arcgis-environment">Effecting the Standard in an ArcGIS Environment</a></li>
+	<li class="usa-alert__text"><a href="#establishing-a-master-copy-metadata-policy">Establishing a Master-Copy Metadata Policy</a></li>
+	<li class="usa-alert__text"><a href="#how-to-meet-the-metadata-standards-level-1-iso-core-requirement">How To: Meet the Standard's Level 1 - ISO Core Requirement in ArcGIS Online</a></li>
+	<li class="usa-alert__text"><a href="#how-to-meet-the-metadata-standards-level-2-full-requirement">How To: Meet the Standard's Level 2 - Full Requirement in ArcGIS Online</a></li>
+</ul>
+</div>
+</div>
+<!--TOPNAV END-->
+
+<!--STANDARD BEGIN-->
+<h1 class="border-top-05 border-base-dark margin-top-5 padding-top-5"><a id="standard" name="standard"></a>Standard&nbsp;<a href="#standard"><i aria-hidden="true" class="fa fa-link">&nbsp;</i></a></h1>
+
+<!--HISTORY SECTION BEGIN-->
+<h2><a id="history" name="history"></a>History&nbsp;<a href="#history"><i aria-hidden="true" class="fa fa-link">&nbsp;</i></a></h2>
+
+<p>The VT GIS Metadata Standard and Guidelines are rooted in standards adopted by the Vermont Geographic Information System (VGIS) and the U.S. government over many years—alongside evolution of GIS technology.</p>
+
+<ul>
+	<li>November 8, 2023 – version 5.0<strong> </strong>– Improved alignment of the standard with the current environment. Improved clarity of specification levels (Level 1 - ISO Core and Level 2 - Full). Improved useability. Approved by VT Enterprise GIS Consortium (EGC) representatives via a voice vote at 11/8/2023 meeting.<br />
+	&nbsp;</li>
+	<li>October 12, 2016 – version 4a – Transformed and modernized the standard into a standard and set of guidelines that are on accord with the current environment. This version takes the open data realm and the trend toward the ISO metadata format into account. Approved by VT Enterprise GIS Consortium (EGC) representatives via a voice vote at 10/12/2016 meeting.<br />
+	&nbsp;</li>
+	<li>August, 2006 – version 3a – Dropped the VGIS Metadata Standard. The FGDC Metadata standard is now the only endorsed/supported standard in Vermont. Consolidated the standard into a single document.<br />
+	&nbsp;</li>
+	<li>February, 1998 – version 2a - Updated to reflect new FGDC metadata standards. Formerly <em>Data Layer Documentation</em>, has now been split into two sub-sections: D-1 FGDC Metadata Standard, and D-2 VGIS Metadata Standard.<br />
+	&nbsp;</li>
+	<li>January, 1992 – version 1c - Revision to reflect a significant expansion provides more detail and explanation on documenting coverage.<br />
+	&nbsp;</li>
+	<li>January, 1991 – version 1b - <em>Section A: Digitizing Data</em> divided into <em>Section A: Digital Data Conversion</em> and <em>Section D: Data Layer Documentation</em>. The latter document replaced and significantly expanded the earlier standard's sections on documentation. The remaining sections were consolidated and renamed <em>Digital Data Conversion</em>.<br />
+	&nbsp;</li>
+	<li>November 15, 1989 – version 1a - <em>Section A: Digitizing Data</em> adopted by Policy Advisory Board</li>
+</ul>
+<!--HISTORY SECTION END-->
+
+<!--STATUTORY AUTHORITY AND STANDARD REVIEW SECTION BEGIN-->
+<h2 class="border-top-1px border-base-lighter margin-top-3 padding-top-3"><a id="statutory-authority-and-standard-review" name="statutory-authority-and-standard-review"></a>Statutory Authority and Standard Review <a href="#statutory-authority-and-standard-review"><i aria-hidden="true" class="fa fa-link">&nbsp;</i></a></h2>
+
+<p>The Vermont Center for Geographic Information (VCGI) has the <a href="https://legislature.vermont.gov/statutes/fullchapter/10/008" target="_blank">statutory authority</a> to craft and adopt VT GIS standards and guidelines. VCGI works with the VT GIS community to carefully craft these standards and guidelines, helping to ensure that Vermont GIS (VGIS) data “is compatible with, useful to” others in the VT GIS community.<br />
+<br />
+The State’s Enterprise GIS Consortium (EGC) is established as the organization responsible for reviewing and approving Vermont GIS standards crafted by VCGI (in collaboration with the Vermont GIS Community).</p>
+<!--STATUTORY AUTHORITY AND STANDARD REVIEW SECTION END-->
+
+<!--PURPOSE SECTION BEGIN-->
+<h2 class="border-top-1px border-base-lighter margin-top-3 padding-top-3"><a id="purpose" name="purpose"></a>Purpose <a href="#purpose"><i aria-hidden="true" class="fa fa-link">&nbsp;</i></a></h2>
+
+<p>Many organizations are invested in development and maintenance of geospatial datasets. These geospatial datasets compose a geospatial data infrastructure which supports a number of functions, which include business intelligence, decision support, and operations. Metadata adds value to these datasets by documenting dataset-specific information, some of which is particularly important. Metadata can answer many questions that consumers of geospatial data might have, such as:</p>
+
+<ul>
+	<li>Where does the data originate?<br />
+	&nbsp;</li>
+	<li>Who should I contact with questions about the data? Does the data have a point of contact?<br />
+	&nbsp;</li>
+	<li>Are there any disclaimers or caveats with this data?<br />
+	&nbsp;</li>
+	<li>Should I note any data credits in work that I produce by using this data?<br />
+	&nbsp;</li>
+	<li>How current is this data?<br />
+	&nbsp;</li>
+	<li>What is the format of this data?<br />
+	&nbsp;</li>
+	<li>What is the spatial accuracy of this data? What is the appropriate scale range for using this data?<br />
+	&nbsp;</li>
+	<li>How is this data produced? What sources are used to produce this data?<br />
+	&nbsp;</li>
+	<li>How do I obtain this data?<br />
+	&nbsp;</li>
+	<li>What are the field definitions of this data? How might I query this data in order to conduct my task?</li>
+</ul>
+<!--PURPOSE SECTION END-->
+
+<!--GUIDING PRINCIPLES SECTION BEGIN-->
+<h2 class="border-top-1px border-base-lighter margin-top-3 padding-top-3"><a id="guiding-principles" name="guiding-principles"></a>Guiding Principles <a href="#guiding-principles"><i aria-hidden="true" class="fa fa-link">&nbsp;</i></a></h2>
+
+<p>The VT GIS Metadata Standard and Guidelines are guided by three principles:</p>
+
+<ul>
+	<li>Provision:&nbsp;Geospatial datasets are accompanied by metadata that provides need-to-know information.<br />
+	&nbsp;</li>
+	<li>Internal Flexibility:&nbsp;Data stewards can choose to manage their internal metadata was they wish.<br />
+	&nbsp;</li>
+	<li>Consistency:&nbsp;Metadata conforms to a consistent functional framework when datasets are shared in a heterogeneous environment or produced through contracts.</li>
+</ul>
+<!--GUIDING PRINCIPLES SECTION END-->
+
+<!--SPECIFICATIONS SECTION BEGIN-->
+<!---ALERT SECTION SPECIFICATIONS BEGIN-->
+<h2 class="border-top-1px border-base-lighter margin-top-3 padding-top-3"><a id="specifications" name="specifications"></a>Specifications <a href="#specifications"><i aria-hidden="true" class="fa fa-link">&nbsp;</i></a></h2>
+
+<div class="usa-alert usa-alert--warning margin-y-5">
+<div class="usa-alert__body">
+<h3 class="usa-alert__heading">There are two standard levels</h3>
+
+<div class="usa-alert__text"><a href="#level-1-iso-core"><strong>Level 1 - ISO Core</strong></a> requires metadata in the <a href="https://www.fgdc.gov/standards/projects/incits-l1-standards-projects/NAP-Metadata/napMetadataProfileV101.pdf/view">North American Profile of ISO 19115:2003</a> standard (ISO 19115 NAP) with certain core fields completed.</div>
+
+<div class="usa-alert__text"><strong><a href="#level-2-full">Level 2 - Full</a> </strong>requires metadata in either the ISO 19115 NAP standard <strong>or</strong> the <a href="https://www.fgdc.gov/metadata/csdgm-standard">FGDC CSDGM</a> standard.<br />
+&nbsp;</div>
+
+<div class="usa-alert__text">Required and conditionally-required fields must be complete to meet each level as specified.<strong> Level 2 - Full</strong> <strong>metadata is required for all key <a href="https://vcgi.vermont.gov/data-and-programs/vermont-spatial-data-infrastructure-vsdi">Vermont Spatial Data Infrastructure (VSDI) GIS data layers</a></strong>, which are foundational and upon which many other data and products depend. <strong>Level 1 - ISO Core is recommended for all data in which fulfilling Level 2 - Full is not possible.</strong><br />
+&nbsp;</div>
+
+<div class="usa-alert__text">The <a href="https://www.iso.org/standard/32557.html" target="_blank">ISO 19139 Geographic Information - Metadata - XML Schema Implementation</a> standard (hereinafter ISO 19139 XML) is the ISO standard that specifies an XML schema for storing certain ISO-standard metadata–including ISO 19115 NAP. ISO 19139 XML can be regarded as a container and carrier for ISO 19115 NAP metadata.</div>
+</div>
+</div>
+<!---ALERT SECTION SPECIFICATIONS END-->
+
+<!--LEVEL 1 ISO CORE BEGIN-->
+<h3><a id="level-1-iso-core" name="level-1-iso-core"></a>Level 1 - ISO Core <a href="#level-1-iso-core"><i aria-hidden="true" class="fa fa-link">&nbsp;</i></a></h3>
+
+<p>Table 1 lists ISO 19115 NAP fields (via ISO 19139 XML paths) for which information is required at Level 1 - ISO Core, requirements and guidance for information supplied to those fields, and FGDC CSDGM counterparts (via XML paths).</p>
+
+<!--LEVEL 1 TABLE BEGIN-->
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="table-layout: fixed; width: 100%; word-wrap:break-word;" summary="This is table summary text.">
+	<caption>Table 1: Level 1 - ISO Core Specifications.</caption>
+	<thead>
+		<tr>
+			<th scope="col" width="11%">ISO 19115 NAP field</th>
+			<th scope="col">ISO 19139 XML Path</th>
+			<th scope="col">Requirements and Guidance</th>
+			<th scope="col" width="19%">FGDC CSDGM Counterpart via XML</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">Title</th>
+			<td>MD_Metadata/identificationInfo/MD_DataIdentification/citation/CI_Citation.title</td>
+			<td>A free text field.</td>
+			<td>metadata/idinfo/citation/citeinfo/title</td>
+		</tr>
+		<tr>
+			<th scope="row">Abstract</th>
+			<td>MD_Metadata/identificationInfo/MD_DataIdentification.abstract</td>
+			<td>Description of dataset.&nbsp;<strong>Field descriptions are required as part of the Abstract. </strong>The ISO 19115 NAP standard doesn't have elements solely dedicated to field descriptions. The Abstract can contain a summary description of a dataset followed by field names and corresponding field descriptions.</td>
+			<td>metadata/idinfo/descript/abstract</td>
+		</tr>
+		<tr>
+			<th scope="row">Dataset Dates</th>
+			<td>MD_Metadata/identificationInfo/MD_DataIdentification/citation/CI_Citation.date</td>
+			<td><strong>Required at least one of</strong> CI_Date elements.<strong> Format dates as a YYYY-MM-DD pattern </strong>per ISO 19115 NAP.</td>
+			<td>(publication dateType only)<br />
+			metadata/idinfo/citation/citeinfo/pubdate</td>
+		</tr>
+		<tr>
+			<th scope="row">Point of Contact</th>
+			<td>MD_Metadata.contact/CI_ResponsibleParty</td>
+			<td><strong>Required at least one of </strong>an individualName, organisationName, <strong>or </strong>positionName.</td>
+			<td>(organisationName only)<br />
+			metadata/metainfo/metc/cntinfo/cntorgp/cntorg</td>
+		</tr>
+		<tr>
+			<th scope="row">Topics</th>
+			<td>MD_Metadata/identificationInfo/MD_DataIdentification.topicCategory</td>
+			<td><strong>Required at least one of</strong> MD_TopicCategoryCode elements from <a href="https://www.fgdc.gov/nap/metadata/register/codelists.html">FGDC code list</a>.</td>
+			<td>metadata/idinfo/keywords/</td>
+		</tr>
+		<tr>
+			<th scope="row">Geographic Extent</th>
+			<td>MD_Metadata/identificationInfo/MD_DataIdentification/extent/EX_Extent.geographicElement</td>
+			<td><strong>Required at least one of</strong> an EX_GeographicBoundingBox element, an EX_GeographicDescription element, <strong>or </strong>an EX_GeographicExtent element. An EX_GeographicBoundingBox is recommended.</td>
+			<td>metadata/idinfo/spdom</td>
+		</tr>
+		<tr>
+			<th scope="row">Spatial Reference System</th>
+			<td>MD_Metadata.referenceSystemInfo</td>
+			<td><strong>Required item <a href="https://spatialreference.org/">EPSG code</a></strong>. If no field for Spatial Reference System exists in metadata editor interface, an EPSG code in Abstract <strong>or </strong>REST service properties meets the requirement. Example EPSG code: 32145</td>
+			<td>No direct translation.</td>
+		</tr>
+		<tr>
+			<th scope="row">Metadata Date Stamp</th>
+			<td>MD_Metadata.dateStamp</td>
+			<td><strong>Required date of last metadata edit. Format dates as a YYYY-MM-DD pattern </strong>per ISO 19115 NAP.</td>
+			<td>metadata/metainfo/metd</td>
+		</tr>
+		<tr>
+			<th scope="row">Metadata Language</th>
+			<td>MD_Metadata.language</td>
+			<td><strong>Required three-letter language code followed by three-letter country code</strong>, separated by an &amp; and a blank space (i.e., <strong>eng; USA</strong> for English in the USA). The language code is an <a href="https://www.loc.gov/standards/iso639-2/php/English_list.php">ISO 639-2/T code</a> and the country code is an <a href="https://unstats.un.org/unsd/methodology/m49/">ISO 3166-1 code</a>.</td>
+			<td>No counterpart.</td>
+		</tr>
+		<tr>
+			<th scope="row">Metadata Character Set</th>
+			<td>MD_Metadata.characterSet</td>
+			<td><strong>Required character coding of the metadata</strong> per <a href="https://www.fgdc.gov/nap/metadata/register/codelists.html">FGDC code list</a>. Typically UTF8.</td>
+			<td>No counterpart.</td>
+		</tr>
+		<tr>
+			<th scope="row">Dataset Language</th>
+			<td>MD_Metadata/identificationInfo/MD_DataIdentification.language</td>
+			<td><strong>Required three-letter language code</strong> from <a href="https://www.loc.gov/standards/iso639-2/php/English_list.php">ISO 639-2/T code</a> list. Code for English is eng.</td>
+			<td>No counterpart.</td>
+		</tr>
+		<tr>
+			<th scope="row">Dataset Character Set</th>
+			<td>MD_Metadata/identificationInfo/MD_DataIdentification/characterSet</td>
+			<td><strong>Required character coding of the dataset </strong>per <a href="https://www.fgdc.gov/nap/metadata/register/codelists.html">FGDC code list</a>. Typically UTF8.</td>
+			<td>No counterpart.</td>
+		</tr>
+	</tbody>
+</table>
+<!--LEVEL 1 TABLE END-->
+<!--LEVEL 1 ISO CORE END-->
+
+<!--LEVEL 2 FULL BEGIN-->
+<!--ALERT SECTION LEVEL 2 BEGIN-->
+<h3><a id="level-2-full" name="level-2-full"></a>Level 2 - Full <a href="#level-2-full"><i aria-hidden="true" class="fa fa-link">&nbsp;</i></a></h3>
+
+<div class="usa-alert usa-alert--info margin-y-5">
+<div class="usa-alert__body">
+<h3 class="usa-alert__heading">Level 2 - Full metadata can be formatted in one of two ways, either is sufficient to meet the Level 2 - Full standard.</h3>
+
+<ul>
+	<li><a href="https://www.iso.org/standard/53798.html">The ISO 19115 NAP standard</a></li>
+	<li><a href="https://www.fgdc.gov/metadata/csdgm-standard">The FGDC CSDGM standard</a></li>
+</ul>
+</div>
+</div>
+<!--ALERT SECTION LEVEL 2 END-->
+<!--LEVEL 2 FULL END-->
+
+<p><strong><a href="https://www.iso.org/standard/53798.html">ISO 19115</a> </strong>is a proprietary international standard that is most accessible via <a href="https://www.fgdc.gov/standards/projects/incits-l1-standards-projects/NAP-Metadata">the Federal Geographic Data Committee's (FGDC) page devoted to a version of it.</a> See the <a href="http://www.fgdc.gov/standards/projects/incits-l1-standards-projects/NAP-Metadata/napMetadataProfileV101.pdf/view">.pdf documents linked from the FGDC </a>for the full content and explanation of the ISO 19115 North American Profile (NAP) standard and its implementation.</p>
+
+<p><strong><a href="https://www.fgdc.gov/metadata/csdgm-standard">FGDC CSDGM</a></strong> is a U.S. federal government-unique standard that remains in use. Although still a viable option to meet the Vermont Level 2 - Full metadata standard discussed here, the FGDC has endorsed ISO Geospatial Metadata Standards (such as ISO 191115 NAP) that are now encouraged for use. See the <a href="http://www.fgdc.gov/standards/projects/metadata/base-metadata/v2_0698.pdf">.pdf documents linked from the FGDC page</a> for the full content and explanation of the FGDC CSDGM standard.</p>
+
+<p>Again, Level 2 - Full metadata is required for all key <a href="https://vcgi.vermont.gov/data-and-programs/vermont-spatial-data-infrastructure-vsdi">Vermont Spatial Data Infrastructure (VSDI) GIS data layers</a>, which are foundational and upon which many other data and products depend.</p>
+<!--SPECIFICATIONS SECTION END-->
+
+<!--GUIDELINES SECTION BEGIN-->
+<!--EFFECTING THE STANDARD IN AN ARCGIS ENVIRONMENT SECTION BEGIN-->
+<h1 class="border-top-05 border-base-dark margin-top-5 padding-top-5"><a id="guidelines" name="guidelines"></a>Guidelines&nbsp;<a href="#guidelines"><i aria-hidden="true" class="fa fa-link">&nbsp;</i></a></h1>
+
+<h2><a id="effecting-the-standard-in-an-arcgis-environment" name="effecting-the-standard-in-an-arcgis-environment"></a>Effecting the Standard in an ArcGIS Environment&nbsp;<a href="#effecting-the-standard-in-an-arcgis-environment"><i aria-hidden="true" class="fa fa-link"> </i></a></h2>
+
+<p>ArcGIS stores metadata in the ArcGIS metadata format. The ArcGIS metadata format is a container of other formats (e.g., ISO 19115 NAP, FGDC CSDGM, etc.). ArcGIS-format metadata contains elements that are translate-able to any ArcGIS-supported metadata format PLUS some elements (e.g., geoprocessing history) that are only in the ArcGIS metadata format.</p>
+
+<p>A metadata style is an ArcGIS setting that determines how metadata is presented and edited (what fields are in the metadata editor)–per a metadata-format-based style. When a format-based style (e.g., ISO 19115 NAP) is applied, ArcGIS metadata is presented according to the elemental structure of that style (ArcGIS metadata content is translated into the style).</p>
+
+<p>In ArcGIS Online, the metadata style is established by <a href="https://doc.arcgis.com/en/arcgis-online/manage-data/metadata.htm" target="_blank">enabling metadata for the organization and selecting a metadata style for the organization</a> (administrator settings).</p>
+
+<p>In ArcGIS Pro, the metadata style is <a href="https://pro.arcgis.com/en/pro-app/latest/help/metadata/view-and-edit-metadata.htm" target="_blank">set at the software settings level</a>.</p>
+
+<p>If you are tasked with editing or viewing metadata in an ArcGIS environment, reading one or both of these documents is helpful:</p>
+
+<ul>
+	<li>ArcGIS Online: <a href="https://doc.arcgis.com/en/arcgis-online/manage-data/metadata.htm" target="_blank">View and edit metadata</a><br />
+	&nbsp;</li>
+	<li>ArcGIS Pro: <a href="https://pro.arcgis.com/en/pro-app/latest/help/metadata/view-and-edit-metadata.htm" target="_blank">View and edit metadata</a></li>
+</ul>
+
+<p><img alt="" data-entity-type="file" data-entity-uuid="45aa3b6d-7f46-43df-a6ed-f9a02098d140" src="/sites/vcgiupdate/files/images/VT%20Metadata%20Standard%20v5.0%20-%20ArcGIS%20Metadata%20Format%20Container%20Diagram%20v.1.0.svg" /></p>
+
+<h3>Translatability Can Meet a Standard Level Requirement When a Dataset:</h3>
+
+<ul>
+	<li>is within an ArcGIS environment and<br />
+	&nbsp;</li>
+	<li>has intrinsic ArcGIS-format metadata (e.g., metadata populated for a feature layer via ArcGIS metadata editor),</li>
+</ul>
+
+<p>if:</p>
+
+<ul>
+	<li>its ArcGIS-format metadata has content that's translate-able (export in ArcGIS) to a standalone ISO 19139 XML file that contains ISO 19115 NAP metadata per Level 1 - ISO Core, the Level 1 - ISO Core requirement is considered met, or<br />
+	&nbsp;</li>
+	<li>if its ArcGIS-format metadata has content that's translate-able (export in ArcGIS) to a standalone ISO 19139 XML file that contains ISO 19115 NAP metadata per Level 2 - Full, the Level 2 - Full requirement is considered met, or<br />
+	&nbsp;</li>
+	<li>if its ArcGIS-format metadata has content that's translate-able (export in ArcGIS) to a standalone FGDC CSDGM XML file that contains FGDC CSDGM metadata per Level 2 - Full, the Level 2 - Full requirement is considered met.</li>
+</ul>
+
+<p><img alt="" data-entity-type="file" data-entity-uuid="c6559a7c-432f-42d6-9d83-c6fbf84ff62c" src="/sites/vcgiupdate/files/images/VT%20Metadata%20Standard%20v5.0%20-%20ArcGIS%20Metadata%20Format%20XML%20Relationship%20v.3.0.svg" /></p>
+<!--EFFECTING THE STANDARD IN AN ARCGIS ENVIRONMENT SECTION END-->
+
+<!--ESTABLISHING A MASTER-COPY METADATA POLICY SECTION BEGIN-->
+<h2 class="border-top-1px border-base-lighter margin-top-3 padding-top-3"><a id="establishing-a-master-copy-metadata-policy" name="establishing-a-master-copy-metadata-policy"></a>Establishing a Master-Copy Metadata Policy <a href="#establishing-a-master-copy-metadata-policy"><i aria-hidden="true" class="fa fa-link">&nbsp;</i></a></h2>
+
+<p>Each organization needs a clear, consistent, and reliable way to store and track its metadata–with designated place(s) for its master-copy metadata. For example, an organization might store/track its metadata per the following policy.</p>
+
+<table align="left" border="1" cellpadding="1" cellspacing="1" style="width: 100%;" summary="This is the summary of table 2.">
+	<caption>Table 2: Example of an organization's master-copy metadata policy.</caption>
+	<thead>
+		<tr>
+			<th scope="col">Item Type</th>
+			<th scope="col">Where Master Metadata Lives</th>
+			<th scope="col">Where Copies Go</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Enterprise geodatabase feature class shared to agency</td>
+			<td>Intrinsic to the enterprise geodatabase feature class, populated via ArcGIS Pro metadata editor, using FGDC CSDGM style</td>
+			<td>If feature class is published to ArcGIS Online as a hosted feature layer, metadata is carried to ArcGIS Online via publishing. As needed, metadata is exported from the enterprise geodatabase into ArcGIS-format XML and overwritten to the metadata of the hosted feature layer.</td>
+		</tr>
+		<tr>
+			<td>Drone lidar rasters</td>
+			<td>Alongside the master data in Azure file share, as a standalone ISO 19139 XML file, in the collection's root folder</td>
+			<td>ISO 19139 XML file is included when data is transferred to outside of the organization.</td>
+		</tr>
+		<tr>
+			<td>ArcGIS Online hosted item with no on-premise counterpart (master data is in ArcGIS Online)</td>
+			<td>Intrinsic to the ArcGIS Online item, using FGDC CSDGM style</td>
+			<td>Nowhere. ArcGIS Online is the item's home.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+<!--ESTABLISHING A MASTER-COPY METADATA POLICY SECTION END-->
+
+<!--HOW TO MEET THE METADATA STANDARDS LEVEL 1 IN AGO SECTION BEGIN-->
+<p class="border-top-1px border-base-lighter margin-top-3 padding-top-3">&nbsp;</p>
+
+<dl>
+	<dt><i aria-hidden="true" class="fa fa-gears fa-4x" style="color:#003300;">&nbsp;</i></dt>
+</dl>
+
+<h2 class="line-height-sans-2"><a id="how-to-meet-the-metadata-standards-level-1-iso-core-requirement" name="how-to-meet-the-metadata-standards-level-1-iso-core-requirement"></a>How To Meet the Metadata Standard's Level 1 - ISO Core Requirement in ArcGIS Online&nbsp;</h2>
+
+<div class="usa-alert usa-alert--warning margin-y-5">
+<div class="usa-alert__body">
+<h3 class="usa-alert__heading">This how-to only applies to items that:</h3>
+
+<ul>
+	<li class="usa-alert__text">are not <a href="https://vcgi.vermont.gov/data-and-programs/vermont-spatial-data-infrastructure-vsdi">VSDI GIS data layers</a> that are foundational and upon which many other data and products depend,</li>
+	<li class="usa-alert__text">are new, have no metadata, or have metadata that is populated for only some fields,</li>
+	<li class="usa-alert__text">are hosted in ArcGIS Online</li>
+</ul>
+</div>
+</div>
+
+<div class="usa-alert usa-alert--info margin-y-5">
+<div class="usa-alert__body">
+<h3 class="usa-alert__heading">Goal</h3>
+
+<p class="usa-alert__text">Meet the standard's Level 1 - ISO Core requirement for a non-VSDI item that’s hosted in ArcGIS Online by creating/editing the item’s metadata in ArcGIS Online (using FGDC CSDGM style).</p>
+</div>
+</div>
+
+<div class="usa-alert usa-alert--info margin-y-5">
+<div class="usa-alert__body">
+<h3 class="usa-alert__heading">What You Need</h3>
+
+<ul>
+	<li class="usa-alert__text">Metadata enabled for the organization in ArcGIS Online, with metadata style set to FGDC CSDGM (administrator settings)</li>
+	<li class="usa-alert__text">An ArcGIS Online item</li>
+	<li class="usa-alert__text">ArcGIS Online login that has permission to modify the item's details (often means being the item's owner)</li>
+</ul>
+</div>
+</div>
+
+<div class="usa-alert usa-alert--warning margin-y-5">
+<div class="usa-alert__body">
+<h3 class="usa-alert__heading">There are times when default metadata of an ArcGIS Online item is written and needs to be edited:</h3>
+
+<ul>
+	<li class="usa-alert__text">When an ArcGIS Online item is created as a hosted feature layer by publishing a geodatabase data-object by Share As Web Layer or Share As Table via ArcGIS Pro</li>
+	<li class="usa-alert__text">When an ArcGIS Online item is created by adding an ArcGIS Server map-service layer</li>
+</ul>
+</div>
+</div>
+
+<h3>Steps</h3>
+
+<ol>
+	<li>Log into ArcGIS Online with permission to modify item’s details (often item owner).</li>
+	<li>Go to item’s details page.</li>
+	<li>Fill the Summary, Description (meets Abstract requirement), and Terms of Use (perhaps a standard disclaimer your organization uses).
+	<ul>
+		<li>Some content entered into the item details page automatically goes into the item’s metadata.</li>
+	</ul>
+	</li>
+	<li>Enter field descriptions in the Description
+	<ul>
+		<li>The Level 1 - ISO Core requirement is based on the ISO 19115 NAP metadata-format–which doesn’t have a field designated for field descriptions.</li>
+		<li>Rich text and hyperlinks can be entered into the Description as needed to provide users with helpful information. Be aware that rich text doesn’t always remain as presentable when metadata is exported to other formats.</li>
+	</ul>
+	</li>
+	<li>Open the Metadata Editor by clicking the Metadata button.</li>
+	<li>Fill in Resource/Citation/Titles &amp; Dates/Title to meet the Title requirement.
+	<ul>
+		<li>This title isn’t synchronized with the title on the item details page–which can be a more presentable title.</li>
+	</ul>
+	</li>
+	<li>Meet the Dataset Dates requirement by doing the following:
+	<ul>
+		<li>publication date: Fill date on which the item is born–publication date–into Resource/Citation/Titles &amp; Dates/Publication Date*. For example, if the item’s first publication is on 2015-01-01 and is modified yearly, its publication date remains 2015-01-01. This date shows as the Published Date in an ArcGIS Hub site (e.g., Vermont Open Geodata Portal).</li>
+		<li>revision date: Consider filling the dataset's revision date (can be date to which the data is current or the date of the last edit/update) in Resource/Citation/Titles &amp; Dates/Revision Date, which shows as the Data Updated date in an ArcGIS Hub site.</li>
+		<li>If the item is a hosted feature layer/table and the revision date is left empty, the Data Updated date in an ArcGIS Hub site automatically updates as the item’s data changes. For example, if an Extract Transform Load (ETL) process re-loads the layer’s data from a feature class, the Data Updated date changes to the date of the re-load.</li>
+	</ul>
+	</li>
+	<li>Go to Resource/Maintenance/Resource Maintenance*/Frequency/Update Frequency*. When not Empty, it shows along with the Data Updated date in an ArcGIS Hub site. If you would like an Update Frequency to show, select a frequency; otherwise, leave the frequency as-is.
+	<ul>
+		<li>Although the Update Frequency isn’t a Level 1 - ISO Core requirement, it can be nice to have.</li>
+	</ul>
+	</li>
+	<li>Go to Metadata/Contact/Metadata Contact*/Contact Name. The Level 1 - ISO Core Point of Contact requirement can be met by entering at least one of Individual Name, Organization Name, and Role*.
+	<ul>
+		<li>Entering an Organization Name is highly recommended–as it’s directly translate-able to FGDC CSDGM format.</li>
+	</ul>
+	</li>
+	<li>Meet the Topics requirement by going to Resource/Keywords/Topic and selecting at least one Topic Category.</li>
+	<li>Meet the Geographic Extent requirement by going to Resource/Extent/Resource Extent*/Geographic/Bounding Box and making sure Bounding values (decimal degrees) are suitable.
+	<ul>
+		<li>In Vermont, enter a "-" (minus) before longitude values (east and west boundaries); in Vermont, longitude values are negative (e.g., -72.58).</li>
+	</ul>
+	</li>
+	<li>Meet the Metadata Date Stamp requirement by filling the date on which the metadata is last edited (e.g., today’s date) into Metadata/Metadata Date/Metadata Date*. This date shows as the Info Updated date that appears with an item in an ArcGIS Hub site.</li>
+	<li>Meet the Metadata Language requirement by going to Metadata/Language/Metadata Language and selecting a language.</li>
+	<li>Meet the Dataset Language requirement by going to Resource/Details/Language/Resource Language and selecting a language.</li>
+</ol>
+
+<h3>Notes</h3>
+
+<ul>
+	<li>The Dataset Characterset and Metadata Characterset requirements are automatically met–as their corresponding fields are automatically filled (e.g., utf8).</li>
+	<li>Level 1 - ISO Core has a Spatial Reference System requirement. The ArcGIS Online metadata editor–when using the FGDC CSDGM metadata style–doesn’t have a field for documenting the item’s spatial reference system. However, if a dataset is provided via the REST protocol and its spatial reference can be identified via its REST service properties (i.e., spatial reference is listed as an <a href="https://spatialreference.org/" target="_blank">EPSG code</a>), the Level 1 - ISO Core requirement is considered met.</li>
+</ul>
+
+<p>&nbsp;</p>
+<!--HOW TO MEET THE METADATA STANDARDS LEVEL 1 IN AGO SECTION END-->
+
+<!--HOW TO MEET THE METADATA STANDARDS LEVEL 2 IN AGO SECTION BEGIN-->
+<p class="border-top-1px border-base-lighter margin-top-3 padding-top-3">&nbsp;</p>
+
+<dl>
+	<dt><i aria-hidden="true" class="fa fa-gears fa-4x" style="color:#003300;">&nbsp;</i></dt>
+</dl>
+
+<h2 class="line-height-sans-2"><a id="how-to-meet-the-metadata-standards-level-2-full-requirement" name="how-to-meet-the-metadata-standards-level-2-full-requirement"></a>How To Meet the Metadata Standard's Level 2 - Full Requirement in ArcGIS Online&nbsp;</h2>
+
+<div class="usa-alert usa-alert--info margin-y-5">
+<div class="usa-alert__body">
+<h3 class="usa-alert__heading">Goal</h3>
+
+<p class="usa-alert__text">Meet the standard's Level 2 - Full requirement for an item that’s hosted in ArcGIS Online by creating/editing the item’s metadata in ArcGIS Online (using FGDC CSDGM style).</p>
+</div>
+</div>
+
+<div class="usa-alert usa-alert--info margin-y-5">
+<div class="usa-alert__body">
+<h3 class="usa-alert__heading">What You Need</h3>
+
+<ul>
+	<li class="usa-alert__text">Metadata enabled for the organization in ArcGIS Online, with metadata style set to FGDC CSDGM (administrator settings)</li>
+	<li class="usa-alert__text">An ArcGIS Online item</li>
+	<li class="usa-alert__text">ArcGIS Online login that has permission to modify the item's details (often means being the item's owner)</li>
+</ul>
+</div>
+</div>
+
+<div class="usa-alert usa-alert--warning margin-y-5">
+<div class="usa-alert__body">
+<h3 class="usa-alert__heading">There are times when default metadata of an ArcGIS Online item is written and needs to be edited:</h3>
+
+<ul>
+	<li class="usa-alert__text">When an ArcGIS Online item is created as a hosted feature layer by publishing a geodatabase data-object by Share As Web Layer or Share As Table via ArcGIS Pro</li>
+	<li class="usa-alert__text">When an ArcGIS Online item is created by adding an ArcGIS Server map-service layer</li>
+</ul>
+</div>
+</div>
+
+<h3>Steps</h3>
+
+<ol>
+	<li>Log into ArcGIS Online with permission to modify item’s details (often item owner).</li>
+	<li>Go to item’s details page.</li>
+	<li>Fill the Summary, Description, and Terms of Use (perhaps a standard disclaimer your organization uses).
+	<ul>
+		<li>Some content entered into the item details page automatically goes into the item’s metadata.</li>
+		<li>Rich text and hyperlinks can be entered into the Description as needed to provide users w/ helpful information. Be aware that rich text doesn’t always remain as presentable when metadata is exported to other formats.</li>
+	</ul>
+	</li>
+	<li>Click the Metadata button. The metadata editor opens. Enter metadata by clicking tabs, operating controls, and filling information. Fill at least all required and conditionally-required fields per the <a href="https://www.fgdc.gov/metadata/csdgm-standard" target="_blank"> FGDC CSDGM</a> standard.</li>
+	<li>Click Validate to see messages on required information that isn't filled; messages are linked to incomplete fields. Iteratively fill required information and click Validate until all messages are addressed.</li>
+	<li>Save. Close.</li>
+</ol>
+<!--HOW TO MEET THE METADATA STANDARDS LEVEL 2 IN AGO SECTION END-->
+<!--GUIDELINES SECTION END-->
